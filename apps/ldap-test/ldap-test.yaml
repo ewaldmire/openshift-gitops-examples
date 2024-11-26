@@ -6,6 +6,7 @@ metadata:
     include.release.openshift.io/self-managed-high-availability: "true"
     include.release.openshift.io/single-node-developer: "true"
     release.openshift.io/create-only: "true"
+    argocd.argoproj.io/sync-options: Prune=false
   labels:
     app.kubernetes.io/instance: ldap-test
   name: cluster
@@ -13,8 +14,6 @@ metadata:
   - apiVersion: config.openshift.io/v1
     kind: ClusterVersion
     name: version
-    uid: 5ebbe82f-d253-4be4-ba87-ff8759c0d16d
-  uid: 7f54a934-643b-4354-a259-b780a0ba5347
 spec:
   identityProviders:
   - gitlab:
